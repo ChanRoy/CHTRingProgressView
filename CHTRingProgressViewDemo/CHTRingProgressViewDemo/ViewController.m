@@ -14,29 +14,37 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) CHTRingProgressView *ringView;
+
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    
+    NSInteger _count;
+    NSTimer *_timer;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CHTRingProgressView *ringView = [[CHTRingProgressView alloc]initWithFrame:CGRectMake(0, 0, 28, 28)];
-    [self.view addSubview:ringView];
+    _ringView = [[CHTRingProgressView alloc]initWithFrame:CGRectMake(0, 0, 28, 28)];
+    [self.view addSubview:_ringView];
     
-    ringView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
+    _ringView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
     
-//    [ringView setProgress:0.5 animated:YES];
-    
-    __block NSInteger count = 0;
-    [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-       
-        NSLog(@"---%ld",count);
-        [ringView setProgress:count++/10 animated:NO];
-        
-    }];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 }
 
+- (void)updateTimer{
+    
+    [_ringView setProgress:_count++/10.0 animated:YES];
+    
+    if (_count > 10) {
+        
+        [_timer invalidate];
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

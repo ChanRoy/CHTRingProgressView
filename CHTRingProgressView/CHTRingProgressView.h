@@ -10,7 +10,11 @@
 
 @interface CHTRingProgressView : UIControl
 
-@property (nonatomic, strong) UIColor *ringTintColor;
+@property (nonatomic, strong) UIColor *backgroundRingColor;
+
+@property (nonatomic, strong) UIColor *progressRingColor;
+
+@property (nonatomic, assign) CGFloat progress;
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated;
 

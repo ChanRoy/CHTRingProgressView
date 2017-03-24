@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE795B0E1E84F918009B3A7D /* CHTRingProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE795B0D1E84F918009B3A7D /* CHTRingProgressView.m */; };
 		AEEF38DC1E83AD4C0028DA20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF38DB1E83AD4C0028DA20 /* main.m */; };
 		AEEF38DF1E83AD4C0028DA20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF38DE1E83AD4C0028DA20 /* AppDelegate.m */; };
 		AEEF38E21E83AD4C0028DA20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF38E11E83AD4C0028DA20 /* ViewController.m */; };
 		AEEF38E51E83AD4C0028DA20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38E31E83AD4C0028DA20 /* Main.storyboard */; };
 		AEEF38E71E83AD4C0028DA20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38E61E83AD4C0028DA20 /* Assets.xcassets */; };
 		AEEF38EA1E83AD4C0028DA20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38E81E83AD4C0028DA20 /* LaunchScreen.storyboard */; };
-		AEEF38F31E83ADB20028DA20 /* CHTRingProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF38F21E83ADB20028DA20 /* CHTRingProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE795B0C1E84F918009B3A7D /* CHTRingProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTRingProgressView.h; sourceTree = "<group>"; };
+		AE795B0D1E84F918009B3A7D /* CHTRingProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTRingProgressView.m; sourceTree = "<group>"; };
 		AEEF38D71E83AD4C0028DA20 /* CHTRingProgressViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHTRingProgressViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEF38DB1E83AD4C0028DA20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AEEF38DD1E83AD4C0028DA20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,8 +29,6 @@
 		AEEF38E61E83AD4C0028DA20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEEF38E91E83AD4C0028DA20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEEF38EB1E83AD4C0028DA20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEEF38F11E83ADB20028DA20 /* CHTRingProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTRingProgressView.h; sourceTree = "<group>"; };
-		AEEF38F21E83ADB20028DA20 /* CHTRingProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTRingProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +42,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE795B0B1E84F918009B3A7D /* CHTRingProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				AE795B0C1E84F918009B3A7D /* CHTRingProgressView.h */,
+				AE795B0D1E84F918009B3A7D /* CHTRingProgressView.m */,
+			);
+			name = CHTRingProgressView;
+			path = ../../CHTRingProgressView;
+			sourceTree = "<group>";
+		};
 		AEEF38CE1E83AD4C0028DA20 = {
 			isa = PBXGroup;
 			children = (
@@ -61,12 +71,11 @@
 		AEEF38D91E83AD4C0028DA20 /* CHTRingProgressViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AE795B0B1E84F918009B3A7D /* CHTRingProgressView */,
 				AEEF38DD1E83AD4C0028DA20 /* AppDelegate.h */,
 				AEEF38DE1E83AD4C0028DA20 /* AppDelegate.m */,
 				AEEF38E01E83AD4C0028DA20 /* ViewController.h */,
 				AEEF38E11E83AD4C0028DA20 /* ViewController.m */,
-				AEEF38F11E83ADB20028DA20 /* CHTRingProgressView.h */,
-				AEEF38F21E83ADB20028DA20 /* CHTRingProgressView.m */,
 				AEEF38E31E83AD4C0028DA20 /* Main.storyboard */,
 				AEEF38E61E83AD4C0028DA20 /* Assets.xcassets */,
 				AEEF38E81E83AD4C0028DA20 /* LaunchScreen.storyboard */,
@@ -159,7 +168,7 @@
 				AEEF38E21E83AD4C0028DA20 /* ViewController.m in Sources */,
 				AEEF38DF1E83AD4C0028DA20 /* AppDelegate.m in Sources */,
 				AEEF38DC1E83AD4C0028DA20 /* main.m in Sources */,
-				AEEF38F31E83ADB20028DA20 /* CHTRingProgressView.m in Sources */,
+				AE795B0E1E84F918009B3A7D /* CHTRingProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +329,7 @@
 				AEEF38F01E83AD4C0028DA20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
