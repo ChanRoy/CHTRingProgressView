@@ -43,29 +43,17 @@
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-        
-        [self initialize];
-        
-        [self setupBgRingLayer];
-        
-        [self setupProgressLayer];
-    }
-    return self;
-}
-
 #pragma mark - private method
 - (void)initialize{
     
+    //setup background color
     _backgroundRingColor = [UIColor colorWithRed:60/ 255.0 green:60/ 255.0 blue:60/ 255.0 alpha:1];;
     _progressRingColor = [UIColor whiteColor];
 }
 
 - (void)setupBgRingLayer{
     
+    //setup background layer: a circle layer
     _bgRingLayer = [CAShapeLayer new];
     _bgRingLayer.frame = self.bounds;
     _bgRingLayer.lineWidth = kRingWidth;
@@ -73,7 +61,7 @@
     _bgRingLayer.fillColor = nil;
     _bgRingLayer.lineCap = kCALineCapRound;
     
-    CGPoint center = CGPointMake(CGRectGetWidth(self.frame)/2, CGRectGetHeight(self.frame)/2);
+    CGPoint center = CGPointMake(CGRectGetWidth(self.bounds)/2, CGRectGetHeight(self.bounds)/2);
     UIBezierPath *bgPath = [UIBezierPath bezierPathWithArcCenter:center radius:kRingRadius-kRingWidth/2 startAngle:-0.5f * M_PI endAngle:1.5f * M_PI clockwise:YES];
     _bgRingLayer.path = [bgPath CGPath];
     
@@ -82,6 +70,7 @@
 
 - (void)setupProgressLayer{
     
+    //setup progress layer
     _progressLayer = [CAShapeLayer new];
     _progressLayer.frame = self.bounds;
     _progressLayer.lineWidth = kRingWidth;
@@ -90,7 +79,7 @@
     _progressLayer.lineCap = kCALineCapRound;
     
     [self.layer addSublayer:_progressLayer];
-
+    
 }
 
 #pragma mark - public method
@@ -101,6 +90,7 @@
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated{
     
+    //change progress
     CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     self.progressLayer.path = [UIBezierPath bezierPathWithArcCenter:center
                                                              radius:kRingRadius-kRingWidth/2
